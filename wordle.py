@@ -44,7 +44,7 @@ def main(f):
     word_dic, known = get_let(cols, known)
     in_word = ''.join(set(''.join([str(item) for item in
                                 word_dic.values()]))).upper()
-    known_set = set(known)
+    known_set = set(map(str.lower,known))
     opts = []
     for i in range(1,6):
         if word_dic[i].isupper():
