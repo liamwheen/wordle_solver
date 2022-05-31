@@ -21,7 +21,7 @@ def get_let(cols=None, known=None):
         word_dic = dict(zip(range(1,6),cols))
 
     if cols==None:
-        print('---ORANGE LETTERS---')
+        print('---KNOWN LETTERS---')
         col1 = input('First col lets:\n')
         col2 = input('Second col lets:\n')
         col3 = input('Third col lets:\n')
@@ -56,6 +56,7 @@ def main(f):
     all_words = load_words()
     valid_opts = [opt for opt in opts if opt in all_words]
     valid_opts = [opt for opt in valid_opts if all(c in opt for c in in_word)]
+    print('---Possible Answers---')
     [print(opt,end='\n')for opt in valid_opts]
 
 
